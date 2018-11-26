@@ -1,0 +1,177 @@
+﻿<Window x:Class="RoboProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoboProjekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="572" Width="1080" Background="#FF4B5457">
+    <Grid Background="#FF171414">
+        <Button x:Name="button_Przod" Content="↑" HorizontalAlignment="Left" Height="60" Margin="514,371,0,0" VerticalAlignment="Top" Width="60" FontSize="36" Click="button_Przod_Click" Opacity="0.9" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0BB9B2"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Tyl" Content="↓" HorizontalAlignment="Left" Height="60" Margin="514,446,0,0" VerticalAlignment="Top" Width="60" FontSize="36" Click="button_Tyl_Click" Opacity="0.9" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0BB9B2"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Prawo" Content="→" HorizontalAlignment="Left" Height="60" Margin="589,446,0,0" VerticalAlignment="Top" Width="60" FontSize="36" Click="button_Prawo_Click" Opacity="0.9" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0BB9B2"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Lewo" Content="←" HorizontalAlignment="Left" Height="60" Margin="439,446,0,0" VerticalAlignment="Top" Width="60" FontSize="36" Click="button_Lewo_Click" Opacity="0.9" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0BB9B2"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Hamulec" Content="Hamulec" HorizontalAlignment="Left" Height="60" Margin="679,446,0,0" VerticalAlignment="Top" Width="139" Click="button_Hamulec_Click" Opacity="0.9" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0BB9B2"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox1_IP" HorizontalAlignment="Left" Height="20" Margin="34,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" TextChanged="textBox1_IP_TextChanged" BorderBrush="{x:Null}" BorderThickness="1" Background="#FFE4D3D3"/>
+        <TextBox x:Name="textBox1_Port" HorizontalAlignment="Left" Height="20" Margin="174,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" TextChanged="textBox1_Port_TextChanged" BorderBrush="{x:Null}" Background="#FFE4D3D3"/>
+        <Button x:Name="button_Polacz" Content="Połącz" HorizontalAlignment="Left" Height="54" Margin="34,106,0,0" VerticalAlignment="Top" Width="110" Click="button_Polacz_Click" Opacity="0.5" Foreground="Black" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Rozlacz" Content="Rozłącz" HorizontalAlignment="Left" Height="54" Margin="174,106,0,0" VerticalAlignment="Top" Width="110" Click="button_Rozlacz_Click" Opacity="0.5" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Ellipse x:Name="Lamp_30" HorizontalAlignment="Left" Height="20" Margin="986,156,0,0" Stroke="Black" VerticalAlignment="Top" Width="20">
+            <Ellipse.Effect>
+                <DropShadowEffect/>
+            </Ellipse.Effect>
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="Red" Offset="0.437"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label x:Name="label1" Content="IP Serwera" HorizontalAlignment="Left" Height="30" Margin="34,20,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label1_Copy" Content="Port" HorizontalAlignment="Left" Height="30" Margin="174,20,0,0" VerticalAlignment="Top" Width="110" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label5" Content="Robot 2" HorizontalAlignment="Left" Height="34" Margin="348,109,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label5_Copy" Content="Robot 3" HorizontalAlignment="Left" Height="34" Margin="348,150,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label5_Copy1" Content="Robot 4" HorizontalAlignment="Left" Height="34" Margin="348,195,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label5_Copy2" Content="Robot 5" HorizontalAlignment="Left" Height="34" Margin="348,240,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label5_Copy3" Content="Robot 1" HorizontalAlignment="Left" Height="34" Margin="348,63,0,0" VerticalAlignment="Top" Width="60" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label6" Content="Położenie X" HorizontalAlignment="Left" Height="30" Margin="438,20,0,0" VerticalAlignment="Top" Width="73" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label6_Copy" Content="Położenie Y" HorizontalAlignment="Left" Height="30" Margin="528,20,0,0" VerticalAlignment="Top" Width="73" Foreground="#FFF9F8F8"/>
+        <Label x:Name="label6_Copy1" Content="Kąt" HorizontalAlignment="Left" Height="30" Margin="638,20,0,0" VerticalAlignment="Top" Width="30" Foreground="#FFF9F8F8"/>
+        <TextBox x:Name="textBox_30_X" HorizontalAlignment="Left" Height="21" Margin="438,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_30_X_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_30_Y" HorizontalAlignment="Left" Height="21" Margin="528,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_30_Y_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_30_Kat" HorizontalAlignment="Left" Height="21" Margin="618,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_30_Kat_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_31_X" HorizontalAlignment="Left" Height="21" Margin="438,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_31_X_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_31_Y" HorizontalAlignment="Left" Height="21" Margin="528,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_31_Y_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_31_Kat" HorizontalAlignment="Left" Height="21" Margin="618,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_31_Kat_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_32_X" HorizontalAlignment="Left" Height="21" Margin="438,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_32_X_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_32_Y" HorizontalAlignment="Left" Height="21" Margin="528,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_32_Y_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_32_Kat" HorizontalAlignment="Left" Height="21" Margin="618,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_32_Kat_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_33_X" HorizontalAlignment="Left" Height="21" Margin="438,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_33_X_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_33_Y" HorizontalAlignment="Left" Height="21" Margin="528,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_33_Y_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_33_Kat" HorizontalAlignment="Left" Height="21" Margin="618,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_33_Kat_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_34_X" HorizontalAlignment="Left" Height="21" Margin="438,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_34_X_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_34_Y" HorizontalAlignment="Left" Height="21" Margin="528,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_34_Y_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_34_Kat" HorizontalAlignment="Left" Height="21" Margin="618,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_34_Kat_TextChanged" IsEnabled="False"/>
+        <Label x:Name="label6_Copy2" Content="Zajęty" HorizontalAlignment="Left" Height="30" Margin="743,20,0,0" VerticalAlignment="Top" Width="45" Foreground="#FFF9F8F8"/>
+        <Button x:Name="button_Steruj_30" Content="Steruj" HorizontalAlignment="Left" Height="66" Margin="842,132,0,0" VerticalAlignment="Top" Width="115" Click="button_Steruj_30_Click" Opacity="0.5" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox_30_Zajety" HorizontalAlignment="Left" Height="21" Margin="728,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_30_Zajety_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_31_Zajety" HorizontalAlignment="Left" Height="21" Margin="728,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_31_Zajety_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_32_Zajety" HorizontalAlignment="Left" Height="21" Margin="728,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_32_Zajety_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_33_Zajety" HorizontalAlignment="Left" Height="21" Margin="728,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_33_Zajety_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox_34_Zajety" HorizontalAlignment="Left" Height="21" Margin="728,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="textBox_34_Zajety_TextChanged" IsEnabled="False"/>
+        <Button x:Name="button_ZmianaTrybu" Content="Zmień tryb" HorizontalAlignment="Left" Height="71" Margin="34,243,0,0" VerticalAlignment="Top" Width="250" Click="button_ZmianaTrybu_Click" Opacity="0.5" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <CheckBox x:Name="checkBox_TrybMonitora" Content="Tryb Monitora" HorizontalAlignment="Left" Margin="34,198,0,0" VerticalAlignment="Top" Height="26" Width="110" Checked="checkBox_TrybMonitora_Checked" IsEnabled="False" Foreground="#FFF9F8F8"/>
+        <CheckBox x:Name="checkBox_TrybKontroli" Content="Tryb Kontroli" HorizontalAlignment="Left" Margin="174,198,0,0" VerticalAlignment="Top" Height="26" Width="110" Checked="checkBox_TrybKontroli_Checked" IsEnabled="False" Foreground="#FFF9F8F8"/>
+        <Rectangle x:Name="RamkaKontrola" HorizontalAlignment="Left" Height="202" Margin="286,318,0,0" VerticalAlignment="Top" Width="675" Fill="#FF171414" d:IsHidden="True"/>
+        <Border BorderBrush="#FF0BB9B2" BorderThickness="1" HorizontalAlignment="Left" Height="320" Margin="22,10,0,0" VerticalAlignment="Top" Width="275" RenderTransformOrigin="0.491,0.531">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="#FF0BB9B2" BorderThickness="1" HorizontalAlignment="Left" Height="320" Margin="326,10,0,0" VerticalAlignment="Top" Width="695" RenderTransformOrigin="0.491,0.531">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="#FF0BB9B2" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="174,56,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.491,0.531">
+            <Border.Effect>
+                <BlurEffect/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="#FF0BB9B2" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="34,56,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.491,0.531">
+            <Border.Effect>
+                <BlurEffect/>
+            </Border.Effect>
+        </Border>
+    </Grid>
+</Window>
